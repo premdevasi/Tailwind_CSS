@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ToDesktop</title>
     <link rel="stylesheet" href="leading_page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
@@ -18,20 +19,50 @@
                 <img src="https://www.todesktop.com/cdn-cgi/image/width=48,height=48,f=auto,fit=cover/_app/immutable/assets/todesktop-logo.bn2Qe8sb.png"
                     alt="">
                 <p class="md:text-xl font-bold">ToDeskTop</p>
+            </div>        
+            <div id="nav-menu" class="hidden md:flex gap-12">
+               <a href="#" class="font-medium hover:text-blue-700">Pricing</a>
+               <a href="#" class="font-medium hover:text-blue-700">Docs</a>
+               <a href="#" class="font-medium hover:text-blue-700">Changelog</a>
+               <a href="#" class="font-medium hover:text-blue-700">Blog</a>
+               <a href="#" class="font-medium hover:text-blue-700">Login</a>
             </div>
-            <div class="md:flex md:gap-8 md:text-md md:font-semibold hidden">
-                <p>Pricing</p>
-                <p>Docs</p>
-                <p>Changelog</p>
-                <p>Blog</p>
-                <p>Login</p>
-            </div>
-            <div class="md:flex gap-2 border-[1px] border-black border-solid p-2 rounded-md mr-5 hidden">
-                <img src="https://www.todesktop.com/_app/immutable/assets/electron-icon.E8mrXtZM.svg" alt="">
-                <p class="font-semibold">Electron Developer→</p>
-            </div>
-            <div class="md:hidden mr-6">
-                <a class="text-4xl" href="#">&#8801;</a>
+            <button>
+                <div class="hidden md:flex gap-2 border-[1px] border-black border-solid p-2 rounded-md mr-5 hover:border-gray-600">
+                    <img src="https://www.todesktop.com/_app/immutable/assets/electron-icon.E8mrXtZM.svg" alt="">
+                    <p class="font-semibold">Electron Developer→</p>
+                </div>
+            </button>
+
+            <button class="p-2 md:hidden mr-5" onclick="handleMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div id="nav-dialog" class="hidden fixed bg-white inset-0 p-3 z-10 md:hidden">
+                  <div id="nav-bar" class="flex justify-between">
+                    <div class="flex items-center gap-2 mx-5">
+                        <img src="https://www.todesktop.com/cdn-cgi/image/width=48,height=48,f=auto,fit=cover/_app/immutable/assets/todesktop-logo.bn2Qe8sb.png"
+                            alt="">
+                        <p class="md:text-xl font-bold">ToDeskTop</p>
+                    </div>    
+                    <button class="p-2 md:hidden mr-5" onclick="handleMenu()">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                  </div>   
+                  <div class="mt-6">
+                    <a href="#" class="font-medium m-3 p-3 hover:bg-gray-200 block rounded-md">Pricing</a>
+                    <a href="#" class="font-medium m-3 p-3 hover:bg-gray-200 block rounded-md">Docs</a>
+                    <a href="#" class="font-medium m-3 p-3 hover:bg-gray-200 block rounded-md">Changelog</a>
+                    <a href="#" class="font-medium m-3 p-3 hover:bg-gray-200 block rounded-md">Blog</a>
+                    <a href="#" class="font-medium m-3 p-3 hover:bg-gray-200 block rounded-md">Login</a>
+                  </div>
+                  <div class="h-[1px] bg-gray-300"></div>
+                  <button>
+                    <div class="w-full mt-6 flex gap-2 p-2 rounded-md mr-5 hover:bg-gray-50 ml-6">
+                        <img src="https://www.todesktop.com/_app/immutable/assets/electron-icon.E8mrXtZM.svg" alt="">
+                        <p class="font-semibold">Electron Developer</p>
+                    </div>
+                </button>
             </div>
         </nav>
         <!-- nav section ends here -->
@@ -101,9 +132,8 @@
         </main>
          <!-- hero section start from here -->
 
-         
     </div>
     <!-- main section ends from here -->
 </body>
-
+<script src="leanding_page.js"></script>
 </html>
